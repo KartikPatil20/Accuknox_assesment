@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ...... NAVBAR...... */
+
+nav {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav > h1 {
+  font-size: 20px;
+  color: rgb(23, 25, 70);
+}
+
+.search-box {
+  display: flex;
+  background-color: rgb(207, 233, 233);
+  gap: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box > input {
+  background-color: rgb(207, 233, 233);
+  border: none;
+  outline: none;
+}
+
+.search-box > img {
+  cursor: pointer;
+  height: 30px;
+}
+
+/* ...... Dashboard...... */
+
+.dashboard {
+  width: 100vw;
+
+  background-color: rgb(207, 233, 233);
+}
+
+.head-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding: 20px;
+}
+
+.head-items > h1 {
+  align-self: center;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.dashboard_feature {
+  height: max-content;
+  display: flex;
+  gap: 10px;
+}
+
+.dashboard_feature > button {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/*...........Categories....................*/
+
+.data-container {
+  width: 100vw;
+  padding-left: 10px;
+}
+
+.categorycard > h1 {
+  font-size: 15px;
+}
+
+.widgetcard {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.widget-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+}
+
+.add-btn {
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.widget-name {
+  font-size: 25px;
+}
+
+.widget-text {
+  font-size: 15px;
+}
+
+.remove-btn {
+  align-self: flex-end;
+  border-radius: 50%;
+  padding: 5px;
+  bottom: -15px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  border-radius: 4px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button > button {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.modal > select {
+  width: 90%;
+  height: 50px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.modal > input {
+  width: 90%;
+  height: 30px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
