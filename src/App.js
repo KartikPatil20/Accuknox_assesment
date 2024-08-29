@@ -14,6 +14,10 @@ export default function App() {
     setIsModalOpen(false);
   };
 
+  const filterCards = categories.filter((item) =>
+    item.name.toLowerCase().trim().includes(Search.trim())
+  );
+
   return (
     <div className="App">
       <nav>
@@ -38,16 +42,27 @@ export default function App() {
           </div>
         </div>
         <div className="data-container">
-          {categories.map((category, index) => {
-            return (
-              <Categorycard
-                key={index}
-                catIndex={index}
-                name={category.name}
-                widgets={category.widgets}
-              />
-            );
-          })}
+          {Search.length > 0 && Search[0] !== " "
+            ? filterCards.map((category, index) => {
+                return (
+                  <Categorycard
+                    key={index}
+                    catIndex={index}
+                    name={category.name}
+                    widgets={category.widgets}
+                  />
+                );
+              })
+            : categories.map((category, index) => {
+                return (
+                  <Categorycard
+                    key={index}
+                    catIndex={index}
+                    name={category.name}
+                    widgets={category.widgets}
+                  />
+                );
+              })}
         </div>
       </div>
       {isModalOpen && <Modal onClose={handleCloseModal} />}
